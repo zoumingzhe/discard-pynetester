@@ -1,0 +1,11 @@
+server:
+  bind:
+    - port: 10517
+    - port: 10518
+
+client:
+  connect:
+    - host: 127.0.0.1
+      port: 10517
+    - host: 127.0.0.1
+      port: 10518

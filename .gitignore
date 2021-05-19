@@ -1,6 +1,6 @@
+*.pyc
 
 pynetester/build/
 pynetester/dist/
 pynetester/pynetester.egg-info/
 
-pynetester/pynetester/tool/__pycache__/
