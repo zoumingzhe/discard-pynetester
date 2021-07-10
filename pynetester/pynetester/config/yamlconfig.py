@@ -10,6 +10,7 @@ import yaml
 # ----------------------------------------------------------------------------------------------------
 # MAP：
 # 已测试 | yamlload(...)                | 导入配置
+# 已测试 | yamldump(...)                | 导出配置
 # 未测试 | yamlmerge(...)               | 合并配置
 # ----------------------------------------------------------------------------------------------------
 class yamlconfig:
@@ -21,6 +22,11 @@ class yamlconfig:
     def yamlload(config_path):
         with open(config_path, 'r') as f:
             return yaml.safe_load(f)
+# ----------------------------------------------------------------------------------------------------
+    @staticmethod
+    def yamldump(config_path, cfgs):
+        with open(config_path, 'w') as f:
+            return yaml.safe_dump(cfgs, f)
 # ----------------------------------------------------------------------------------------------------
     @staticmethod
     def yamlmerge(config1, config2):
