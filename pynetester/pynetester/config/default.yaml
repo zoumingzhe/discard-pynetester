@@ -1,11 +1,20 @@
 server:
-  bind:
-    - port: 10517
-    - port: 10518
+  port:
+    - 10517
+    - 10518
+  limit:
+    limit_client_max: 10
+  thread:
+    thread_num: 128
+    thread_max: 1024
+  checksum: CRC32
+
+secure:
+  password: Aa_123+-*/
+  whitelist:
+  blacklist:
 
 client:
   connect:
-    - host: 127.0.0.1
-      port: 10517
-    - host: 127.0.0.1
-      port: 10518
+    - 127.0.0.1:10517
+    - 127.0.0.1:10518
